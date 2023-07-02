@@ -1,3 +1,32 @@
 html {
   background-color: #18181b;
 }
+
+#button-wrapper {
+  text-align: center;
+  padding-top: 200px;
+}
+
+.login-button {
+  color: white;
+  background-color: transparent;
+  border: 0px;
+  padding: 10px;
+  margin: 5px;
+}
+
+.login-button:hover {
+  border-radius: 5px;
+}
+
+.TW:hover {
+  outline: 1px solid #9146ff;
+}
+
+.YT:hover {
+  outline: 1px solid #ff0000;
+}
+
+.PR:hover {
+  outline: 1px solid #ffffff;
+}

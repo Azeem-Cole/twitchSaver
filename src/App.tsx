@@ -6,8 +6,9 @@ import {
 } from "./Auth/Twitch/TwitchAuth";
 import { LiveChatIRC } from "./Auth/Twitch/TwitchIRC";
 import { FaTwitch, FaYoutube } from "react-icons/fa";
+import { BsPersonFill } from "react-icons/bs";
+import { ProfileColor, TwitchColor, YTColor } from "./Constant";
 import "./App.css";
-import { TwitchColor, YTColor } from "./Constant";
 
 const App = () => {
   const [accessToken, setAccessToken] = useState<string | undefined>(undefined);
@@ -44,7 +45,6 @@ const App = () => {
 
   return (
     <div id="main-app-wrapper">
-      <div></div>
       {accessToken ? (
         <div>
           <h1>Welcome, {user?.display_name}!</h1>
@@ -52,14 +52,25 @@ const App = () => {
           <LiveChatIRC />
         </div>
       ) : (
-        <>
-          <button onClick={handleLogin}>
-            Log in with Twitch <FaTwitch size={40} color={TwitchColor} />
+        <div id="button-wrapper">
+          <button
+            type="button"
+            className="login-button TW"
+            onClick={handleLogin}
+          >
+            <FaTwitch size={100} color={TwitchColor} />
+            <p>Log in with Twitch </p>
           </button>
-          <button onClick={handleLogin}>
-            Log in with Yotube <FaYoutube size={40} color={YTColor} />
+          <button type="button" className="login-button YT" onClick={() => {}}>
+            <FaYoutube size={100} color={YTColor} />
+            <p>Log in with YouTube </p>
           </button>
-        </>
+
+          <button type="button" className="login-button PR" onClick={() => {}}>
+            <BsPersonFill size={100} color={ProfileColor} />
+            <p>Log in with Profile </p>
+          </button>
+        </div>
       )}
     </div>
   );
