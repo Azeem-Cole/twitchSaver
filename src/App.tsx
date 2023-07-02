@@ -14,9 +14,6 @@ const App = () => {
   const [user, setUser] = useState<any>(null);
   const [error, setError] = useState<string | undefined>(undefined);
 
-  console.log("", process.env.REACT_APP_CLIENT_ID);
-  console.log("", process.env.REACT_APP_REDIRECT_URL);
-
   useEffect(() => {
     const handleAuthResponse = async () => {
       const { accessToken, error } = parseAuthResponse();
@@ -52,6 +49,7 @@ const App = () => {
         <div>
           <h1>Welcome, {user?.display_name}!</h1>
           <p>Email: {user?.email}</p>
+          <LiveChatIRC />
         </div>
       ) : (
         <>
@@ -63,7 +61,6 @@ const App = () => {
           </button>
         </>
       )}
-      <LiveChatIRC />
     </div>
   );
 };
