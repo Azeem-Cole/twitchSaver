@@ -1,15 +1,11 @@
 const path = require("path");
-const stylesHandler = "style-loader";
+const Dotenv = require("dotenv-webpack");
 
 const config = {
-  entry: "./src/index.ts",
+  mode: "development",
+  entry: path.resolve(__dirname, "src/index.tsx"),
   output: {
     path: path.resolve(__dirname, "dist"),
-  },
-  devServer: {
-    static: {
-      directory: path.join(__dirname, "./dist"),
-    },
   },
   module: {
     rules: [
@@ -40,7 +36,7 @@ const config = {
       },
       {
         test: /\.css$/i,
-        use: [stylesHandler, "css-loader"],
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
@@ -49,11 +45,11 @@ const config = {
     ],
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".jsx", ".js"],
+    extensions: [".tsx", ".ts", ".jsx", ".js", ".css"],
   },
+  plugins: [new Dotenv()],
 };
 
 module.exports = () => {
-  config.mode = "development";
   return config;
 };
