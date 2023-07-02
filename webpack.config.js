@@ -1,5 +1,6 @@
 const path = require("path");
 const Dotenv = require("dotenv-webpack");
+const HtmlWebpackplugin = require("html-webpack-plugin");
 
 const config = {
   mode: "development",
@@ -7,28 +8,15 @@ const config = {
   output: {
     path: path.resolve(__dirname, "dist"),
   },
+  devtool: "source-map",
+  devServer: {
+    hot: true,
+    open: true,
+    compress: true,
+    historyApiFallback: true,
+  },
   module: {
     rules: [
-      {
-        loader: "babel-loader",
-        test: /.(js|jsx)$/,
-        exclude: ["/node_modules/"],
-        options: {
-          presets: [
-            [
-              "@babel/preset-env",
-              {
-                targets: {
-                  esmodules: true,
-                },
-              },
-            ],
-            "@babel/preset-react",
-            "@babel/preset-flow",
-          ],
-        },
-      },
-
       {
         test: /\.(ts|tsx)$/i,
         loader: "ts-loader",
@@ -47,7 +35,13 @@ const config = {
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js", ".css"],
   },
-  plugins: [new Dotenv()],
+  plugins: [
+    new Dotenv(),
+    new HtmlWebpackplugin({
+      filename: "index.html",
+      template: "public/template.html",
+    }),
+  ],
 };
 
 module.exports = () => {
