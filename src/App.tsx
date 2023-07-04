@@ -25,19 +25,19 @@ const App = () => {
 
   useEffect(() => {
     const handleAuthResponse = async () => {
-      const { accessToken: access_token_tw } = parseAuthResponseTW();
-      const { accessToken: access_token_yt } = parseAuthResponseYT();
+      const { accessToken: access_token_TW } = parseAuthResponseTW();
+      const { accessToken: access_token_YT } = parseAuthResponseYT();
 
-      const newaccessToken = access_token_tw || access_token_yt;
+      const newAccessToken = access_token_TW || access_token_YT;
       if (error) {
         setError(error);
         return;
       }
 
-      if (newaccessToken) {
-        setAccessToken(newaccessToken);
+      if (newAccessToken) {
+        setAccessToken(newAccessToken);
         try {
-          const userInfo = await getUserInfoTW(newaccessToken);
+          const userInfo = await getUserInfoTW(newAccessToken);
           setUser(userInfo);
         } catch (error) {
           setError("Failed to fetch user information");
