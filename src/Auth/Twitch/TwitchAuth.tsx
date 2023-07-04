@@ -2,7 +2,7 @@ import axios from "axios";
 import queryString from "query-string";
 
 const twitchAuth = {
-  clientId: process.env.REACT_APP_CLIENT_ID,
+  clientId: process.env.REACT_APP_TWITCH_CLIENT_ID,
   redirectUri: process.env.REACT_APP_REDIRECT_URL,
 };
 
@@ -24,7 +24,7 @@ export const parseAuthResponseTW = (): {
   error?: string;
 } => {
   const params = queryString.parse(window.location.hash);
-  console.log(params)
+  console.log(params);
   const error = params.error as string;
 
   if (error) {
