@@ -3,6 +3,7 @@
     "target": "es6",
     "module": "commonjs",
     "lib": ["es6", "dom"],
+    "types": ["node", "dotenv/config"],
     "outDir": "./dist",
     "strict": true,
     "esModuleInterop": true,

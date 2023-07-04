@@ -42,7 +42,7 @@ export const LiveChatIRC = () => {
 
         const messageLogCount = messageContainer.children.length;
 
-        if (messageLogCount > 20) {
+        if (messageLogCount > 5) {
           messageContainer.lastElementChild?.remove();
         }
       }

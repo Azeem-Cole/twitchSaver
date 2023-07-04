@@ -1,14 +1,12 @@
 import axios from "axios";
 import queryString from "query-string";
-// import dotenv from "dotenv";
-// dotenv.config();
 
-export const twitchAuth = {
+const twitchAuth = {
   clientId: process.env.REACT_APP_CLIENT_ID,
   redirectUri: process.env.REACT_APP_REDIRECT_URL,
 };
 
-export const getAuthUrl = (): string => {
+export const getAuthUrlTW = (): string => {
   const params = {
     client_id: twitchAuth.clientId,
     redirect_uri: twitchAuth.redirectUri,
@@ -21,11 +19,12 @@ export const getAuthUrl = (): string => {
   )}`;
 };
 
-export const parseAuthResponse = (): {
+export const parseAuthResponseTW = (): {
   accessToken?: string;
   error?: string;
 } => {
   const params = queryString.parse(window.location.hash);
+  console.log(params)
   const error = params.error as string;
 
   if (error) {
@@ -36,7 +35,7 @@ export const parseAuthResponse = (): {
   return { accessToken };
 };
 
-export const getUserInfo = async (accessToken: string): Promise<any> => {
+export const getUserInfoTW = async (accessToken: string): Promise<any> => {
   try {
     const response = await axios.get("https://api.twitch.tv/helix/users", {
       headers: {
@@ -49,19 +48,3 @@ export const getUserInfo = async (accessToken: string): Promise<any> => {
     throw new Error("Failed to fetch user information");
   }
 };
-
-// const twitchPubSub = new BasicPubSubClient();
-// // const { accessToken } = parseAuthResponse();
-// // twitchPubSub.registerUserListener(twitchAuth.clientId, accessToken); // Replace with your Twitch App Client ID and user access token
-
-// export const listenToChannelChat = (channelId: string) => {
-//   twitchPubSub.onMessage((topic, message) => {
-//     console.log(message);
-//   });
-
-//   twitchPubSub.connect().catch(console.error);
-// };
-
-// export const disconnectFromChannelChat = () => {
-//   twitchPubSub.disconnect();
-// };
