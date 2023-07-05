@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "module": "commonjs",
+    "module": "ESNext",
     "lib": ["es6", "dom"],
     "types": ["node", "dotenv/config"],
     "outDir": "./dist",
     "strict": true,
     "esModuleInterop": true,
+    "moduleResolution": "Node16",
     "sourceMap": true,
     "jsx": "react-jsx"
   },

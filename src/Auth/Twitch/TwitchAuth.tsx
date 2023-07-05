@@ -1,5 +1,5 @@
 import axios from "axios";
-import queryString from "query-string";
+import queryString from "querystring";
 
 const twitchAuth = {
   clientId: process.env.REACT_APP_TWITCH_CLIENT_ID,

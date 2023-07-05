@@ -1,5 +1,5 @@
-import axios, { AxiosResponse } from "axios";
-import queryString from "query-string";
+import axios from "axios";
+import queryString from "querystring";
 
 const scopes = ["https://www.googleapis.com/auth/youtube"];
 

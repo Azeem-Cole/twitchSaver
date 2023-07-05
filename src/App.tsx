@@ -83,7 +83,7 @@ const App = () => {
             <p>Log in with YouTube </p>
           </button>
 
-          <button type="button" className="login-button PR" onClick={() => {}}>
+          <button type="button" className="login-button PR">
             <BsPersonFill size={100} color={ProfileColor} />
             <p>Log in with Profile </p>
           </button>

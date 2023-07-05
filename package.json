@@ -64,6 +64,7 @@
     "@types/tmi.js": "^1.8.3",
     "dotenv": "^16.3.1",
     "dotenv-webpack": "^8.0.1",
+    "eslint": "^8.44.0",
     "eslint-import-resolver-typescript": "^3.5.5",
     "html-webpack-plugin": "^5.5.3",
     "webpack": "^5.88.1",
