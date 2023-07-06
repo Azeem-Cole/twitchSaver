@@ -1,5 +1,5 @@
 import axios from "axios";
-import queryString from "querystring";
+import querystring from "querystring";
 
 const twitchAuth = {
   clientId: process.env.REACT_APP_TWITCH_CLIENT_ID,
@@ -14,7 +14,7 @@ export const getAuthUrlTW = (): string => {
     scope: "user:read:email",
   };
 
-  return `https://id.twitch.tv/oauth2/authorize?${queryString.stringify(
+  return `https://id.twitch.tv/oauth2/authorize?${querystring.stringify(
     params
   )}`;
 };
@@ -23,15 +23,15 @@ export const parseAuthResponseTW = (): {
   accessToken?: string;
   error?: string;
 } => {
-  const params = queryString.parse(window.location.hash);
-  console.log(params);
+  const params = querystring.parse(window.location.hash);
   const error = params.error as string;
 
   if (error) {
     return { error };
   }
 
-  const accessToken = params.access_token as string;
+  const accessToken = params["#access_token"] as string;
+ 
   return { accessToken };
 };
 

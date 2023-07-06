@@ -17,6 +17,8 @@
   "rules": {
     "semi": "warn",
     "no-unused-vars": "warn",
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "no-console": "warn",
+    "no-multiple-empty-lines": ["error", { "max": 1 }]
   }
 }

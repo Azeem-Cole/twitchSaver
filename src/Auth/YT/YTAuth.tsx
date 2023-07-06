@@ -33,7 +33,7 @@ export const parseAuthResponseYT = (): {
     return { error };
   }
 
-  const accessToken = params.access_token as string;
+  const accessToken = params["#access_token"] as string;
   return { accessToken };
 };
 
