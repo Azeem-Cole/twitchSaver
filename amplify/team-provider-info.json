@@ -1,0 +1,15 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-twitchsaver-staging-161635-authRole",
+      "UnauthRoleArn": "arn:aws:iam::857776397904:role/amplify-twitchsaver-staging-161635-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::857776397904:role/amplify-twitchsaver-staging-161635-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-twitchsaver-staging-161635-deployment",
+      "UnauthRoleName": "amplify-twitchsaver-staging-161635-unauthRole",
+      "StackName": "amplify-twitchsaver-staging-161635",
+      "StackId": "arn:aws:cloudformation:us-east-1:857776397904:stack/amplify-twitchsaver-staging-161635/81e3bb90-1e95-11ee-9709-12ece929ef17",
+      "AmplifyAppId": "d1wskb0w7hekvp"
+    }
+  }
+}
