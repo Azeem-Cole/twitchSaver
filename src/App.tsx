@@ -12,7 +12,7 @@ import { getAuthUrlYT, parseAuthResponseYT } from "./Auth/YT/YTAuth";
 import { useDispatch, useSelector } from "react-redux";
 import { decrement } from "./reducers";
 import { RootState } from ".";
-import awsconfig from "./aws-exports";
+import awsconfig from "./customTypes/aws-exports";
 import { Amplify } from "aws-amplify";
 import type { WithAuthenticatorProps } from "@aws-amplify/ui-react";
 import { withAuthenticator } from "@aws-amplify/ui-react";

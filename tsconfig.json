@@ -11,6 +11,6 @@
     "sourceMap": true,
     "jsx": "react-jsx"
   },
-  "include": ["src/**/*", "src/**/*.d.ts"],
+  "include": ["src/**/*", "src/customTypes/*"],
   "exclude": ["node_modules"]
 }
