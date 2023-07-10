@@ -1,7 +1,5 @@
 {
-  "providers": [
-    "awscloudformation"
-  ],
+  "providers": ["awscloudformation"],
   "projectName": "twitchSaver",
   "version": "3.1",
   "frontend": "javascript",
@@ -10,8 +8,8 @@
     "config": {
       "SourceDir": "src",
       "DistributionDir": "build",
-      "BuildCommand": "npm.cmd run-script build",
-      "StartCommand": "npm.cmd run-script start"
+      "BuildCommand": "npm.cmd run-script webbuild",
+      "StartCommand": "npm.cmd run-script webstart"
     }
   }
 }
