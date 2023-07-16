@@ -6,7 +6,7 @@ import "./TwitchIRC.css";
 import { TwitchColor } from "../../Constant";
 
 const client = new tmi.client({
-  channels: ["summit1g"],
+  channels: ["Agent00"],
 });
 
 const jsxElement = <FaTwitch size={16} color={TwitchColor} />;
@@ -42,7 +42,7 @@ export const LiveChatIRC = () => {
 
         const messageLogCount = messageContainer.children.length;
 
-        if (messageLogCount > 5) {
+        if (messageLogCount > 20) {
           messageContainer.lastElementChild?.remove();
         }
       }
