@@ -1,5 +1,5 @@
 import { createSelector } from "@reduxjs/toolkit";
-import { RootState } from "./Index";
+import { RootState } from "./index";
 
 export const getCounter = (state: RootState) => state.rootReducer;
 

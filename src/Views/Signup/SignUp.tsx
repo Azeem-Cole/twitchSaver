@@ -1,0 +1,46 @@
+import { useEffect } from "react";
+import { getAuthUrlTW } from "../../Auth/Twitch/TwitchAuth";
+import { FaTwitch, FaYoutube } from "react-icons/fa";
+import { TwitchColor, youtubeColor } from "../../Constant";
+import awsconfig from "../../aws-exports";
+import { Amplify } from "aws-amplify";
+import "@aws-amplify/ui-react/styles.css";
+import { TwithLogin } from "../../Auth/Twitch/TwitchLogin";
+import { getAuthUrlYT } from "../../Auth/YT/YTAuth";
+
+Amplify.configure(awsconfig);
+
+const SignUp = () => {
+  const handleLoginTW = () => {
+    window.location.href = getAuthUrlTW();
+  };
+
+  const handleLoginYT = () => {
+    window.location.href = getAuthUrlYT();
+  };
+
+  useEffect(() => {
+    TwithLogin();
+  }, [window.localStorage.getItem("token")]);
+
+  return (
+    <div id="main-app-wrapper">
+      <div id="button-wrapper">
+        <button
+          type="button"
+          className="login-button TW"
+          onClick={handleLoginTW}
+        >
+          <FaTwitch size={100} color={TwitchColor} />
+          <p>Log in with Twitch </p>
+        </button>
+        <button type="button" className="login-button YT">
+          <FaYoutube size={100} color={youtubeColor} onClick={handleLoginYT} />
+          <p>Log in with YouTube </p>
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default SignUp;

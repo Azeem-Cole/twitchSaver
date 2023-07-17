@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const config = {
   mode: "development",
-  entry: path.resolve(__dirname, "src/Index.tsx"),
+  entry: path.resolve(__dirname, "src/index.tsx"),
   output: {
     path: path.resolve(__dirname, "dist"),
   },
@@ -40,6 +40,7 @@ const config = {
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "public/template.html",
+      title: "Chat Watch!",
     }),
   ],
 };

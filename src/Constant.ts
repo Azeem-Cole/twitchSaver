@@ -1,3 +1,4 @@
 export const TwitchColor = "#9146FF";
-export const YTColor = "#FF0000";
-export const ProfileColor = "#FFFFFF";
+export const youtubeColor = "#FF0000";
+export const cadetBlue = "#5f9ea0";
+export const profileColor = "#FFFFFF";

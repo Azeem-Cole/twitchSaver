@@ -1,0 +1,71 @@
+/* Tags */
+html {
+  background-color: #18181b;
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: #ffffff;
+}
+
+a:hover,
+button:hover {
+  color: #5f9ea0;
+}
+
+button {
+  background: transparent;
+  border: 0px;
+}
+
+#button-wrapper {
+  text-align: center;
+  padding-top: 200px;
+}
+
+.login-button {
+  color: white;
+  background-color: transparent;
+  border: 0px;
+  padding: 10px;
+  margin: 5px;
+}
+
+.login-button:hover {
+  border-radius: 5px;
+}
+
+.TW:hover {
+  outline: 1px solid #9146ff;
+}
+
+.YT:hover {
+  outline: 1px solid #ff0000;
+}
+
+.PR:hover {
+  outline: 1px solid #ffffff;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  align-items: baseline;
+}
+
+.navigation-container {
+  border-bottom: 1px solid #ffffff;
+}
+
+.nav-list-left {
+  flex: 1;
+}
+
+.nav-list-right {
+  margin-left: auto;
+}

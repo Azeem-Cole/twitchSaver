@@ -2,8 +2,8 @@ import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
 import { rootReducer } from "./Reducers";
-import App from "./App";
-import SignUp from "./SignUp";
+import App from "./Views/App/App";
+import SignUp from "./Views/Signup/SignUp";
 
 const store = configureStore({
   reducer: { rootReducer: rootReducer },
