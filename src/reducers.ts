@@ -1,32 +1,30 @@
-// reducers.ts
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-// Define the initial state
-interface CounterState {
-  value: number;
-}
-
-const initialState: CounterState = {
-  value: 0,
+type CounterState = {
+  count: number;
+  twithAccessToken?: string;
+  youTubeAccessToken?: string;
 };
 
-// Create a slice with the initial state and reducers
+const initialState: CounterState = {
+  count: 0,
+};
+
 const counterSlice = createSlice({
   name: "counter",
   initialState,
   reducers: {
-    increment(state) {
-      state.value++;
+    increment(state, action: PayloadAction<number>) {
+      state.count += action.payload;
     },
-    decrement(state) {
-      state.value--;
+    decrement(state, action: PayloadAction<number>) {
+      state.count += action.payload;
     },
-    incrementByAmount(state, action: PayloadAction<number>) {
-      state.value += action.payload;
+    setTwitchToken(state, action: PayloadAction<string | undefined>) {
+      state.twithAccessToken = action.payload;
     },
   },
 });
 
-// Export the slice's actions and reducer
-export const { increment, decrement, incrementByAmount } = counterSlice.actions;
-export default counterSlice.reducer;
+export const rootReducer = counterSlice.reducer;
+export const { increment, decrement } = counterSlice.actions;

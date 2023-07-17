@@ -40,6 +40,7 @@ const config = {
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "public/template.html",
+      title: "Chat Watch!",
     }),
   ],
 };
