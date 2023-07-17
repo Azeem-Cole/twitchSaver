@@ -8,7 +8,9 @@ export const TwithLogin = () => {
 
   if (access_token_TW) {
     localStorage.setItem("token", access_token_TW);
-    window.location.href = window.location.origin;
+    window.location.href = window.location.host;
+
+    console.log("window.location", window.location);
   }
 
   if (error_TW) {

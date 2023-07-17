@@ -2,13 +2,10 @@ import { useEffect } from "react";
 import { getAuthUrlTW } from "../../Auth/Twitch/TwitchAuth";
 import { FaTwitch, FaYoutube } from "react-icons/fa";
 import { TwitchColor, youtubeColor } from "../../Constant";
-import awsconfig from "../../aws-exports";
-import { Amplify } from "aws-amplify";
 import "@aws-amplify/ui-react/styles.css";
 import { TwithLogin } from "../../Auth/Twitch/TwitchLogin";
 import { getAuthUrlYT } from "../../Auth/YT/YTAuth";
 
-Amplify.configure(awsconfig);
 
 const SignUp = () => {
   const handleLoginTW = () => {
