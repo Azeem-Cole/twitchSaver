@@ -28,3 +28,4 @@ const counterSlice = createSlice({
 
 export const rootReducer = counterSlice.reducer;
 export const { increment, decrement } = counterSlice.actions;
+
