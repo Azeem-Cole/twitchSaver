@@ -16,5 +16,23 @@
         "twitchSaver": {}
       }
     }
+  },
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-twitchsaver-dev-220432-authRole",
+      "UnauthRoleArn": "arn:aws:iam::857776397904:role/amplify-twitchsaver-dev-220432-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::857776397904:role/amplify-twitchsaver-dev-220432-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-twitchsaver-dev-220432-deployment",
+      "UnauthRoleName": "amplify-twitchsaver-dev-220432-unauthRole",
+      "StackName": "amplify-twitchsaver-dev-220432",
+      "StackId": "arn:aws:cloudformation:us-east-1:857776397904:stack/amplify-twitchsaver-dev-220432/efa18260-276a-11ee-b75a-123c6c544773",
+      "AmplifyAppId": "d262lmu1bgdfpn"
+    },
+    "categories": {
+      "auth": {
+        "twitchSaver": {}
+      }
+    }
   }
 }

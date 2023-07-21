@@ -4,6 +4,11 @@ Implicit grant flow
 
 import axios from "axios";
 import querystring from "querystring";
+import { Amplify } from "aws-amplify";
+import awsconfig from "../../aws-exports";
+
+// Configure Amplify with the generated awsconfig
+Amplify.configure(awsconfig);
 
 const twitchAuth = {
   clientId: process.env.TWITCH_CLIENT_ID,
@@ -11,6 +16,7 @@ const twitchAuth = {
 };
 
 export const getAuthUrlTW = (): string => {
+  console.log("hello12345", awsconfig);
   const params = {
     client_id: twitchAuth.clientId,
     redirect_uri: twitchAuth.redirectUri,

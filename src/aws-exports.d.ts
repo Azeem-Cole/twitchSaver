@@ -1,2 +1,2 @@
-declare const config: any;
-export default config;
+declare const awsmobile: any;
+export default awsmobile;
