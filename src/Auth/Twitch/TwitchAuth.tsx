@@ -5,9 +5,9 @@ Implicit grant flow
 import axios from "axios";
 import querystring from "querystring";
 import { Amplify } from "aws-amplify";
-import awsconfig from "../../aws-exports";
+import awsmobile from "../../aws-exports";
 
-Amplify.configure(awsconfig);
+Amplify.configure(awsmobile);
 
 const twitchAuth = {
   clientId: process.env.REACT_APP_TWITCH_CLIENT_ID,
