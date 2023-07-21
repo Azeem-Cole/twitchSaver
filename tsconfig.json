@@ -3,7 +3,7 @@
     "target": "es6",
     "module": "ESNext",
     "lib": ["es6", "dom"],
-    "types": ["node", "dotenv/config"],
+    "types": ["node"],
     "outDir": "./dist",
     "strict": true,
     "esModuleInterop": true,
