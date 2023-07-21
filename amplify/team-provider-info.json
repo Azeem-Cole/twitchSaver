@@ -1,32 +1,14 @@
 {
-  "staging": {
+  "production": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-amplify6c787dca27024-staging-45141-authRole",
-      "UnauthRoleArn": "arn:aws:iam::857776397904:role/amplify-amplify6c787dca27024-staging-45141-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::857776397904:role/amplify-amplify6c787dca27024-staging-45141-authRole",
+      "AuthRoleName": "amplify-twitchsaver-production-152302-authRole",
+      "UnauthRoleArn": "arn:aws:iam::857776397904:role/amplify-twitchsaver-production-152302-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::857776397904:role/amplify-twitchsaver-production-152302-authRole",
       "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-amplify6c787dca27024-staging-45141-deployment",
-      "UnauthRoleName": "amplify-amplify6c787dca27024-staging-45141-unauthRole",
-      "StackName": "amplify-amplify6c787dca27024-staging-45141",
-      "StackId": "arn:aws:cloudformation:us-east-1:857776397904:stack/amplify-amplify6c787dca27024-staging-45141/77d39b20-1a26-11ee-b1a9-0ad4329c65a3",
-      "AmplifyAppId": "d262lmu1bgdfpn"
-    },
-    "categories": {
-      "auth": {
-        "twitchSaver": {}
-      }
-    }
-  },
-  "dev": {
-    "awscloudformation": {
-      "AuthRoleName": "amplify-twitchsaver-dev-220432-authRole",
-      "UnauthRoleArn": "arn:aws:iam::857776397904:role/amplify-twitchsaver-dev-220432-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::857776397904:role/amplify-twitchsaver-dev-220432-authRole",
-      "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-twitchsaver-dev-220432-deployment",
-      "UnauthRoleName": "amplify-twitchsaver-dev-220432-unauthRole",
-      "StackName": "amplify-twitchsaver-dev-220432",
-      "StackId": "arn:aws:cloudformation:us-east-1:857776397904:stack/amplify-twitchsaver-dev-220432/efa18260-276a-11ee-b75a-123c6c544773",
+      "DeploymentBucketName": "amplify-twitchsaver-production-152302-deployment",
+      "UnauthRoleName": "amplify-twitchsaver-production-152302-unauthRole",
+      "StackName": "amplify-twitchsaver-production-152302",
+      "StackId": "arn:aws:cloudformation:us-east-1:857776397904:stack/amplify-twitchsaver-production-152302/0768c4c0-1e8e-11ee-8365-12e7fd5fe8db",
       "AmplifyAppId": "d262lmu1bgdfpn"
     },
     "categories": {
