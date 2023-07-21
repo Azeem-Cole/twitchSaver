@@ -4,8 +4,8 @@ import queryString from "querystring";
 const scopes = ["https://www.googleapis.com/auth/youtube"];
 
 const googleInfo = {
-  client_id: process.env.REACT_APP_YOUTUBE_CLIENT_ID,
-  redirect_uri: process.env.REACT_APP_REDIRECT_URL,
+  client_id: process.env.YOUTUBE_CLIENT_ID,
+  redirect_uri: process.env.REDIRECT_URL,
   response_type: "token",
   scope: scopes,
 };

@@ -5,7 +5,7 @@ import { FaTwitch, FaYoutube } from "react-icons/fa";
 
 import "./App.css";
 import { cadetBlue, TwitchColor, youtubeColor } from "../../Constant";
-import { ChangeEvent, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 const App = () => {
   const [inputValue, setInputValue] = useState<string>();

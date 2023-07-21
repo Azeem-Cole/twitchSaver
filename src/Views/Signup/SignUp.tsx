@@ -6,7 +6,6 @@ import "@aws-amplify/ui-react/styles.css";
 import { TwithLogin } from "../../Auth/Twitch/TwitchLogin";
 import { getAuthUrlYT } from "../../Auth/YT/YTAuth";
 
-
 const SignUp = () => {
   const handleLoginTW = () => {
     window.location.href = getAuthUrlTW();
@@ -31,8 +30,12 @@ const SignUp = () => {
           <FaTwitch size={100} color={TwitchColor} />
           <p>Log in with Twitch </p>
         </button>
-        <button type="button" className="login-button YT">
-          <FaYoutube size={100} color={youtubeColor} onClick={handleLoginYT} />
+        <button
+          type="button"
+          className="login-button YT"
+          onClick={handleLoginYT}
+        >
+          <FaYoutube size={100} color={youtubeColor} />
           <p>Log in with YouTube </p>
         </button>
       </div>
