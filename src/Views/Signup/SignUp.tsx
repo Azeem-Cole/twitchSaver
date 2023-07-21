@@ -22,14 +22,10 @@ const SignUp = () => {
   return (
     <div id="main-app-wrapper">
       <div id="button-wrapper">
-        <button
-          type="button"
-          className="login-button TW"
-          onClick={handleLoginTW}
-        >
+        <a type="button" className="login-button TW" href={getAuthUrlTW()}>
           <FaTwitch size={100} color={TwitchColor} />
           <p>Log in with Twitch </p>
-        </button>
+        </a>
         <button
           type="button"
           className="login-button YT"
