@@ -2,9 +2,9 @@ import { useEffect } from "react";
 import { getAuthUrlTW } from "../../Auth/Twitch/TwitchAuth";
 import { FaTwitch, FaYoutube } from "react-icons/fa";
 import { TwitchColor, youtubeColor } from "../../Constant";
-import "@aws-amplify/ui-react/styles.css";
 import { TwithLogin } from "../../Auth/Twitch/TwitchLogin";
 import { getAuthUrlYT } from "../../Auth/YT/YTAuth";
+import "@aws-amplify/ui-react/styles.css";
 
 const SignUp = () => {
   const handleLoginTW = () => {

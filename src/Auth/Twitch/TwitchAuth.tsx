@@ -7,7 +7,6 @@ import querystring from "querystring";
 import { Amplify } from "aws-amplify";
 import awsconfig from "../../aws-exports";
 
-// Configure Amplify with the generated awsconfig
 Amplify.configure(awsconfig);
 
 const twitchAuth = {
@@ -16,13 +15,14 @@ const twitchAuth = {
 };
 
 export const getAuthUrlTW = (): string => {
-  console.log("hello12345", awsconfig);
   const params = {
     client_id: twitchAuth.clientId,
     redirect_uri: twitchAuth.redirectUri,
     response_type: "token",
     scope: "user:read:email",
   };
+
+  console.log("hello12345", awsconfig, params);
 
   return `https://id.twitch.tv/oauth2/authorize?${querystring.stringify(
     params
