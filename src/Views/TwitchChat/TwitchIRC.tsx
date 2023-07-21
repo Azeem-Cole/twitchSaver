@@ -2,7 +2,7 @@ import tmi from "tmi.js";
 import { FaTwitch } from "react-icons/fa";
 import { renderToString } from "react-dom/server";
 import "./TwitchIRC.css";
-import { TwitchColor } from "../../Constant";
+import { twitchColor } from "../../Constant";
 import { generateRandomColor } from "../../Auth/Twitch/TwitchFuncs";
 import { useEffect } from "react";
 type prop = { channelName?: string };
@@ -27,7 +27,7 @@ export const LiveChatIRC = ({ channelName }: prop) => {
     const messageContainer = document.getElementById("messageContainer");
 
     if (messageContainer) {
-      const jsxElement = <FaTwitch size={16} color={TwitchColor} />;
+      const jsxElement = <FaTwitch size={16} color={twitchColor} />;
       client.connect().catch(() => {
         return null;
       });

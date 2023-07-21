@@ -22,7 +22,7 @@ export const getAuthUrlTW = (): string => {
     scope: "user:read:email",
   };
 
-  console.log("hello12345", awsconfig, params);
+  console.log("hello", params);
 
   return `https://id.twitch.tv/oauth2/authorize?${querystring.stringify(
     params

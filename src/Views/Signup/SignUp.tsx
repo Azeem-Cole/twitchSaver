@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { getAuthUrlTW } from "../../Auth/Twitch/TwitchAuth";
 import { FaTwitch, FaYoutube } from "react-icons/fa";
-import { TwitchColor, youtubeColor } from "../../Constant";
+import { twitchColor, youtubeColor } from "../../Constant";
 import { TwithLogin } from "../../Auth/Twitch/TwitchLogin";
 import { getAuthUrlYT } from "../../Auth/YT/YTAuth";
 import "@aws-amplify/ui-react/styles.css";
@@ -23,7 +23,7 @@ const SignUp = () => {
     <div id="main-app-wrapper">
       <div id="button-wrapper">
         <a type="button" className="login-button TW" href={getAuthUrlTW()}>
-          <FaTwitch size={100} color={TwitchColor} />
+          <FaTwitch size={100} color={twitchColor} />
           <p>Log in with Twitch </p>
         </a>
         <button

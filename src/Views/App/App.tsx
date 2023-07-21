@@ -4,7 +4,7 @@ import { VscThreeBars } from "react-icons/vsc";
 import { FaTwitch, FaYoutube } from "react-icons/fa";
 
 import "./App.css";
-import { cadetBlue, TwitchColor, youtubeColor } from "../../Constant";
+import { cadetBlue, twitchColor, youtubeColor } from "../../Constant";
 import { useRef, useState } from "react";
 
 const App = () => {
@@ -39,7 +39,7 @@ const App = () => {
             <div>
               <FaTwitch
                 size={40}
-                color={TwitchColor}
+                color={twitchColor}
                 style={{ margin: 0, padding: 0 }}
               />
             </div>
