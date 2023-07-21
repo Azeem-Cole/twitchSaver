@@ -10,8 +10,8 @@ import awsconfig from "../../aws-exports";
 Amplify.configure(awsconfig);
 
 const twitchAuth = {
-  clientId: process.env.TWITCH_CLIENT_ID,
-  redirectUri: process.env.REDIRECT_URL,
+  clientId: process.env.REACT_APP_TWITCH_CLIENT_ID,
+  redirectUri: process.env.REACT_APP_REDIRECT_URL,
 };
 
 export const getAuthUrlTW = (): string => {
