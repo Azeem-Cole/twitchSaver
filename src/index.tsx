@@ -4,6 +4,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import { rootReducer } from "./Reducer";
 import App from "./Views/App/App";
 import SignUp from "./Views/Signup/SignUp";
+import "./index.css";
 
 const store = configureStore({
   reducer: { rootReducer: rootReducer },

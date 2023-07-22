@@ -22,17 +22,21 @@ const SignUp = () => {
   return (
     <div id="main-app-wrapper">
       <div id="button-wrapper">
-        <a type="button" className="login-button TW" href={getAuthUrlTW()}>
+        <button
+          type="button"
+          className="login-button TW"
+          onClick={handleLoginTW}
+        >
           <FaTwitch size={100} color={twitchColor} />
-          <p>Log in with Twitch </p>
-        </a>
+          <p>Log in with Twitch</p>
+        </button>
         <button
           type="button"
           className="login-button YT"
           onClick={handleLoginYT}
         >
           <FaYoutube size={100} color={youtubeColor} />
-          <p>Log in with YouTube </p>
+          <p>Log in with YouTube</p>
         </button>
       </div>
     </div>

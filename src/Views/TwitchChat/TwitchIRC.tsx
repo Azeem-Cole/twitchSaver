@@ -3,9 +3,9 @@ import { FaTwitch } from "react-icons/fa";
 import { renderToString } from "react-dom/server";
 import "./TwitchIRC.css";
 import { twitchColor } from "../../Constant";
-import { generateRandomColor } from "../../Auth/Twitch/TwitchFuncs";
+import { generateRandomColor } from "../../Funcs/TwitchFuncs";
 import { useEffect } from "react";
-type prop = { channelName?: string };
+type prop = { channelName?: string; };
 
 export const LiveChatIRC = ({ channelName }: prop) => {
   const client = new tmi.client({

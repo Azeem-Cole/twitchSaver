@@ -4,8 +4,8 @@ import queryString from "querystring";
 const scopes = ["https://www.googleapis.com/auth/youtube"];
 
 const googleInfo = {
-  client_id: process.env.YOUTUBE_CLIENT_ID,
-  redirect_uri: process.env.REDIRECT_URL,
+  client_id: process.env.REACT_APP_YOUTUBE_CLIENT_ID,
+  redirect_uri: process.env.REACT_APP_REDIRECT_URL,
   response_type: "token",
   scope: scopes,
 };
@@ -22,6 +22,7 @@ export const getAuthUrlYT = (): string => {
     params
   )}`;
 };
+
 export const parseAuthResponseYT = (): {
   accessToken?: string;
   error?: string;
@@ -50,6 +51,7 @@ export const getUserInfoYT = async (accessToken: string): Promise<any> => {
     );
     return response.data.data[0];
   } catch (error) {
-    throw new Error("Failed to fetch user information");
+    // eslint-disable-next-line no-console
+    console.log("error signing up:", error);
   }
 };

@@ -3,16 +3,16 @@ import querystring from "querystring";
 export const TwithLogin = () => {
   const params = querystring.parse(window.location.hash);
 
-  const access_token_TW = <string>params["#access_token"];
-  const error_TW = params["error"];
+  const accessTokenTW = <string>params["#access_token"];
+  const errorTW = params["error"];
 
-  if (access_token_TW) {
-    localStorage.setItem("token", access_token_TW);
-    console.log("window.location", window.location);
+  if (accessTokenTW) {
+    localStorage.setItem("token", accessTokenTW);
+    window.location.href = window.location.origin;
   }
 
-  if (error_TW) {
+  if (errorTW) {
     // eslint-disable-next-line no-console
-    console.log(error_TW);
+    console.log(errorTW);
   }
 };

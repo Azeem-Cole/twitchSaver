@@ -1,0 +1,39 @@
+/* Tags */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+html {
+  background-color: #18181b;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+body {
+  margin: 5px;
+}
+
+h1 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #ffffff;
+}
+
+a:hover,
+button:hover {
+  color: #5f9ea0;
+}
+
+button {
+  background: transparent;
+  border: 0px;
+  color: #ffffff;
+}

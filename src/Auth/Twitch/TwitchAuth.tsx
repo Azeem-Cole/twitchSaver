@@ -22,8 +22,6 @@ export const getAuthUrlTW = (): string => {
     scope: "user:read:email",
   };
 
-  console.log("hello", params);
-
   return `https://id.twitch.tv/oauth2/authorize?${querystring.stringify(
     params
   )}`;
@@ -39,6 +37,7 @@ export const getUserInfoTW = async (accessToken: string): Promise<any> => {
     });
     return response.data.data[0];
   } catch (error) {
-    console.log("Failed to fetch user information");
+    // eslint-disable-next-line no-console
+    console.log("Failed to fetch user information", error);
   }
 };
